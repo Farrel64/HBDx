@@ -1,0 +1,23 @@
+<ion-view ng-controller='pubDetailCtrl' view-title="{{pub.name}}">
+  <ion-content>
+  <div class="row overview">
+    <div class="image col col-50">
+      <img src="{{pub.image}}" />
+    </div>
+    <div class=" center col col-50">
+      <h2> Happy Hour </h2>
+      <hr>
+      <h2>{{pub.happyStart}}H - {{pub.happyEnd}}H</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-67">
+      <h2>{{pub.name}}</h2>
+      <h4>{{pub.distance}}m</h4>
+    </div>
+    <div class="col col-33">
+      <h4>{{pub.price}}€</h4>
+    </div>
+  </div>
+  </ion-content>
+</ion-view>

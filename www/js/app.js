@@ -1,15 +1,21 @@
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic', 'pubList', 'pubDetail'])
 
-  .controller('TodoCtrl', function($scope, $ionicPopup, $ionicListDelegate){
-    $scope.pubs =
-      [
-        {name: "Mushroom", distance:450, happyStart: 17, happyEnd: 20, price: 3.50, image: "img/mushroom.jpg"},
-        {name: "Camelot", distance:1535, happyStart: 17.30, happyEnd: 19, price: 3.50, image: "img/camelot.jpg"},
-        {name: "Titi Twister", distance:1475,  happyStart: 18, happyEnd: 21, price: 3.50, image: "img/titi.jpg"},
-      ];
+  .config(function($stateProvider, $urlRouterProvider){
 
+    $stateProvider
+
+    .state('pubs', {
+      url:'/pubs',
+      templateUrl: 'templates/pubs.html'
+    })
+
+    .state('pub', {
+      url: '/pubs/:pubId',
+      templateUrl: 'templates/pub.html'
+    })
+
+    $urlRouterProvider.otherwise('/pubs');
   })
-
 
 
 .run(function($ionicPlatform) {
