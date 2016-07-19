@@ -24,12 +24,18 @@ angular.module('mapPub', [])
           position: latLng
       });
 
+      marker.addListener('click', gotoPub);
+
     });
+
 
   }, function(error){
     console.log("Could not get location");
   });
 
+  function gotoPub() {
+    $state.go('pub', ({"pubId":2}));
+  }
 
 
 
