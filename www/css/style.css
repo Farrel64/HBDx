@@ -23,3 +23,43 @@
   margin-top : 10px;
   margin-bottom: 10px;
 }
+
+.menuPub{
+  max-height: 300px;
+}
+
+.price{
+  text-align: center;
+}
+
+.scroll-bar-indicator
+{
+	display: none;
+}
+
+.linkButtonBar * {
+  text-align: center;
+}
+
+.linkButtonBar .button {
+  height : 75px;
+}
+
+.filters{
+    background-color: lightgray;
+}
+
+.filters *{
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.scroll {
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}

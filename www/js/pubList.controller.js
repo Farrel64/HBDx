@@ -1,11 +1,56 @@
 angular.module('pubList', [])
 
-.controller('pubListCtrl', function($scope){
-  $scope.pubs =
-    [
-      {id: 1, name: "Mushroom", distance:450, location:"Gambetta", happyStart: 17, happyEnd: 20, price: 3.50, image: "img/mushroom.jpg"},
-      {id: 2, name: "Camelot", distance:1535, location:"La Victoire", happyStart: 17.3, happyEnd: 19, price: 3.50, image: "img/camelot.jpg"},
-      {id: 3, name: "Titi Twister", distance:1475, location:"La Victoire", happyStart: 18, happyEnd: 21, price: 3.50, image: "img/titi.jpg"},
-    ];
+.controller('pubListCtrl', function($scope, $ionicPopup) {
+
+  $scope.showFilter = false;
+  $scope.filters = {beer: false, wine: false, cocktail: false};
+
+  $scope.pubs = [{
+    id: 1,
+    name: "Mushroom",
+    distance: 450,
+    location: "Gambetta",
+    happyStart: 17,
+    happyEnd: 20,
+    price: 3.50,
+    image: "img/mushroom.jpg",
+    mainDrinkType: "Beer",
+    secondDrinkType: "Cocktail",
+    rating: 4.2
+  }, {
+    id: 2,
+    name: "Camelot",
+    distance: 1535,
+    location: "La Victoire",
+    happyStart: 17.30,
+    happyEnd: 19,
+    price: 3.50,
+    image: "img/camelot.jpg",
+    mainDrink: "Cocktail",
+    secondDrinkType: "Beer",
+    rating: 3.8
+  }, {
+    id: 3,
+    name: "Titi Twister",
+    distance: 1475,
+    location: "La Victoire",
+    happyStart: 18,
+    happyEnd: 21,
+    price: 3.50,
+    image: "img/titi.jpg",
+    mainDrink: "Beer",
+    secondDrinkType: "Wine",
+    rating: 4.4
+  }, ];
+
+  $scope.showInfo = function(){
+    $ionicPopup.alert({
+      title: 'Happy Bordeaux',
+      template : "Cette application est actuellement en Alpha. Veuillez repasser plus tard pour des infos détaillées !",
+      okText: "J'ai compris !",
+      okType: "button-clear button-positive"
+    })
+  };
+
 
 })
