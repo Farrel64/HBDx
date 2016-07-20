@@ -2,9 +2,11 @@ Filtres : Ajouter un range selector pour la distance max;
 
 Map :
     - Multiple marker support sur la map de l'application (en dynamique)
-    - Map Boutton : Open Map Page on pub location !
 
 Détails : V2 du Layout à désigner? (post-Alpha release task)
+
+
+
 
 Version : V0.1 Alpha
 
