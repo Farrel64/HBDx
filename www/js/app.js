@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'pubList', 'pubDetail', 'mapPub', 'ngCordova'])
+angular.module('starter', ['ionic', 'pubList', 'pubDetail', 'mapPub', 'mapDirPub', 'ngCordova'])
 
 .config(function($stateProvider, $urlRouterProvider,  $ionicConfigProvider) {
 
@@ -20,6 +20,12 @@ angular.module('starter', ['ionic', 'pubList', 'pubDetail', 'mapPub', 'ngCordova
     url: '/map',
     templateUrl: 'templates/map.html',
     controller: 'mapCtrl'
+  })
+
+  .state('mapDir', {
+    url: '/map/:pubId',
+    templateUrl: 'templates/map.html',
+    controller: 'mapDirCtrl'
   })
 
 

@@ -2,22 +2,22 @@ Filtres : Ajouter un range selector pour la distance max;
 
 Map :
     - Multiple marker support sur la map de l'application (en dynamique)
-    - Map Boutton : - Open Maps Application?
-                    - Open Map Page on pub location?
+    - Map Boutton : Open Map Page on pub location !
 
 Détails : V2 du Layout à désigner? (post-Alpha release task)
 
 Version : V0.1 Alpha
 
   Détails : - Main List V0.1
-                    - Filters V0.1
+                    - Filters V0.2
                     - InfoButton V0.1
                     - BarsNumber V0.1
 
             - Detail View V0.1 :
                     - Rating V0.1
                     - Social N/A
-                    - MapLink N/A
+                    - MapLink V0.1 :
+                          - Open map in application with direction from actual to pub location "WALKING"
 
             - Map V0.1
 
