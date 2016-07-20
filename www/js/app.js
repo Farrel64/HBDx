@@ -28,6 +28,20 @@ angular.module('starter', ['ionic', 'pubList', 'pubDetail', 'mapPub', 'ngCordova
   //$ionicConfigProvider.scrolling.jsScrolling(false);
 })
 
+.filter('distFilter', function () {
+  return function (items, dist) {
+  var filtered = [];
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    if (item.distance <= parseInt(dist)) {
+      filtered.push(item);
+    }
+  }
+  return filtered;
+  };
+})
+
+
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

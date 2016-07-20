@@ -3,6 +3,8 @@ angular.module('pubList', [])
 .controller('pubListCtrl', function($scope, $ionicPopup) {
 
   $scope.showFilter = false;
+  $scope.distMax = 2500;
+
   $scope.filters = {
     beer: false,
     wine: false,
@@ -56,13 +58,5 @@ angular.module('pubList', [])
     })
   };
 
-  $scope.showRating = function() {
-    $ionicPopup.prompt({
-      title: 'Rate this pub !',
-      template: 'Enter your secret password',
-      inputType: 'range'
-    }).then(function(res) {
-      console.log('rating is : ', res);
-    });
-  };
+
 })
