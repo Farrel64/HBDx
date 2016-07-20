@@ -3,7 +3,11 @@ angular.module('pubList', [])
 .controller('pubListCtrl', function($scope, $ionicPopup) {
 
   $scope.showFilter = false;
-  $scope.filters = {beer: false, wine: false, cocktail: false};
+  $scope.filters = {
+    beer: false,
+    wine: false,
+    cocktail: false
+  };
 
   $scope.pubs = [{
     id: 1,
@@ -16,7 +20,7 @@ angular.module('pubList', [])
     image: "img/mushroom.jpg",
     mainDrinkType: "Beer",
     secondDrinkType: "Cocktail",
-    rating: 4.2
+    rating: [4.2]
   }, {
     id: 2,
     name: "Camelot",
@@ -28,7 +32,7 @@ angular.module('pubList', [])
     image: "img/camelot.jpg",
     mainDrink: "Cocktail",
     secondDrinkType: "Beer",
-    rating: 3.8
+    rating: [3.8]
   }, {
     id: 3,
     name: "Titi Twister",
@@ -40,17 +44,25 @@ angular.module('pubList', [])
     image: "img/titi.jpg",
     mainDrink: "Beer",
     secondDrinkType: "Wine",
-    rating: 4.4
+    rating: [4.6, 3.9]
   }, ];
 
-  $scope.showInfo = function(){
+  $scope.showInfo = function() {
     $ionicPopup.alert({
       title: 'Happy Bordeaux',
-      template : "Cette application est actuellement en Alpha. Veuillez repasser plus tard pour des infos détaillées !",
+      template: "Cette application est actuellement en Alpha. Veuillez repasser plus tard pour des infos détaillées !",
       okText: "J'ai compris !",
       okType: "button-clear button-positive"
     })
   };
 
-
+  $scope.showRating = function() {
+    $ionicPopup.prompt({
+      title: 'Rate this pub !',
+      template: 'Enter your secret password',
+      inputType: 'range'
+    }).then(function(res) {
+      console.log('rating is : ', res);
+    });
+  };
 })
