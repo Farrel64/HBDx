@@ -1,8 +1,3 @@
-Filtres : Ajouter un range selector pour la distance max;
-
-Map :
-    - Multiple marker support sur la map de l'application (en dynamique)
-
 Détails : V2 du Layout à désigner? (post-Alpha release task)
 
 
@@ -11,16 +6,16 @@ Détails : V2 du Layout à désigner? (post-Alpha release task)
 Version : V0.1 Alpha
 
   Détails : - Main List V0.1
-                    - Filters V0.2
+                    - Filters V0.3
                     - InfoButton V0.1
                     - BarsNumber V0.1
 
             - Detail View V0.1 :
                     - Rating V0.1
                     - Social N/A
-                    - MapLink V0.1 :
+                    - MapLink V0.2 :
                           - Open map in application with direction from actual to pub location "WALKING"
 
-            - Map V0.1
+            - Map V0.2
 
 Login : For Beta
