@@ -45,7 +45,11 @@ angular.module('pubDetail', [])
     image: "img/mushroom.jpg",
     mainDrinkType: "Beer",
     secondDrinkType: "Cocktail",
-    rating: [4.2, 3.9, 4, 5, 3.5]
+    position: {
+      lat: 44.84057,
+      lng: -0.58149
+    },
+    rating: [4.2]
   }, {
     id: 2,
     name: "Camelot",
@@ -57,7 +61,11 @@ angular.module('pubDetail', [])
     image: "img/camelot.jpg",
     mainDrink: "Cocktail",
     secondDrinkType: "Beer",
-    rating: [3.8, 3.9, 4, 5, 3.5]
+    position: {
+      lat: 44.83237,
+      lng: -0.57107
+    },
+    rating: [3.8]
   }, {
     id: 3,
     name: "Titi Twister",
@@ -69,7 +77,11 @@ angular.module('pubDetail', [])
     image: "img/titi.jpg",
     mainDrink: "Beer",
     secondDrinkType: "Wine",
-    rating: [4.6, 3.9, 4, 5, 3.5]
+    position: {
+      lat: 44.83175,
+      lng: -0.56963
+    },
+    rating: [4.6, 3.9]
   }, ];
 
 
@@ -97,10 +109,10 @@ function rateAvg() {
       scope: $scope,
       buttons: [{
         text: 'Cancel',
-        type: 'button-default',
+        type: 'button-dark button-clear',
       }, {
         text: '<b>Ok</b>',
-        type: 'button-positive',
+        type: 'button-positive button-clear',
         onTap: function(e) {
           if (!$scope.data.userRating) {
                e.preventDefault();
