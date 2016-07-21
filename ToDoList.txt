@@ -12,7 +12,7 @@ Version : V0.1 Alpha
 
             - Detail View V0.1 :
                     - Rating V0.1
-                    - Social N/A
+                    - Social V0.1
                     - MapLink V0.2 :
                           - Open map in application with direction from actual to pub location "WALKING"
 
