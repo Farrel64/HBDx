@@ -104,7 +104,7 @@ function rateAvg() {
   $scope.showRating = function() {
     $scope.data = {}
     var myPopup = $ionicPopup.show({
-      template: '<input type="range" value="3" max="5" min="0" step="1" ng-model="data.userRating">',
+      template: '<div class="row"><div class="col col-75"><input type="range" value="3" max="5" min="0" step="1" ng-model="data.userRating"></div><div class="col col-10 col-offset-10">{{data.userRating}}</div></div>',
       title: 'Rate this Pub !',
       scope: $scope,
       buttons: [{

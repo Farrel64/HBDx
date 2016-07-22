@@ -56,10 +56,10 @@ angular.module('mapPub', [])
     rating: [4.6, 3.9]
   }, ];
 
-
   $cordovaGeolocation.getCurrentPosition(options).then(function(position) {
 
     var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    $scope.actualPos = latLng;
 
     var mapOptions = {
       center: latLng,
@@ -68,6 +68,12 @@ angular.module('mapPub', [])
     };
 
     $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    mymarker = new google.maps.Marker({
+      map: $scope.map,
+      position: latLng,
+      icon: "/img/blue_dot.png"
+    });
 
     //Wait until the map is loaded
     google.maps.event.addListenerOnce($scope.map, 'idle', function() {
@@ -90,4 +96,12 @@ angular.module('mapPub', [])
   }, function(error) {
     console.log("Could not get location");
   });
+
+  /* var watchId = navigator.geolocation.watchPosition({},null//function(position) {
+  //  var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    //console.log("coucou");
+  //}
+); */
+
+
 });

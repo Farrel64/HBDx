@@ -11,7 +11,7 @@ Version : V0.1 Alpha
                     - BarsNumber V0.1
 
             - Detail View V0.1 :
-                    - Rating V0.1
+                    - Rating V0.2
                     - Social V0.1
                     - MapLink V0.2 :
                           - Open map in application with direction from actual to pub location "WALKING"
