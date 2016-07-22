@@ -1,7 +1,7 @@
 Détails : V2 du Layout à désigner? (post-Alpha release task)
 
 
-
+Map autorisations on mobile device !!
 
 Version : V0.1 Alpha
 
